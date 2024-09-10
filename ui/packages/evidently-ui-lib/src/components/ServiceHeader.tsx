@@ -1,5 +1,5 @@
-import { AppBar, Button, IconButton, Link, Toolbar, Typography } from '@mui/material'
 import GitHubIcon from '@mui/icons-material/GitHub'
+<<<<<<< HEAD
 import axios from 'axios'
 
 // openapi fetch
@@ -16,6 +16,9 @@ const handleReload = async () => {
     console.error('API call failed:', error);
   }
 };
+=======
+import { AppBar, Button, IconButton, Link, Toolbar, Typography } from '@mui/material'
+>>>>>>> 29dca00db5959f20da98193cb0c9fdafda9daa97
 
 export function ServiceHeader({
   version,
@@ -30,8 +33,8 @@ export function ServiceHeader({
     <>
       <AppBar position={'static'} color={'transparent'}>
         <Toolbar>
-          <Typography variant="h6" sx={{ flexGrow: 1 }}>
-            <img src={logoSrc} height="55px" />
+          <Typography variant='h6' sx={{ flexGrow: 1 }}>
+            <img src={logoSrc} height='55px' alt='evidently logo' />
             <span style={{ verticalAlign: 'super', fontSize: '0.75rem' }}>{version}</span>
           </Typography>
           {authComponent}
