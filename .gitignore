@@ -22,4 +22,3 @@ evidently-openapi-schema.yml
 # see .devcontainer/devcontainer.json
 test-workspace
 workspace-for-visual-testing
-workspace
