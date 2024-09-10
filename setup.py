@@ -80,7 +80,7 @@ setup_args = dict(
             "pip-audit>=2.7.2",
             "wheel==0.38.1",
             "setuptools==65.5.1; python_version < '3.12'",
-            "setuptools==68.2.2; python_version >= '3.12'",
+            "setuptools==70.0.0; python_version >= '3.12'",
             "jupyter==1.0.0",
             "mypy==0.981",
             "pytest==7.4.4",
