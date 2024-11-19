@@ -13,7 +13,7 @@ sqlalchemy==2.0.12
 tqdm==4.65.0
 
 # linters & formatters
-wheel==0.35.1
+wheel==0.38.1
 setuptools==50.3.2
 flake8==4.0.1
 mypy==0.920
