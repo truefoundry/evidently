@@ -1,5 +1,18 @@
 import GitHubIcon from '@mui/icons-material/GitHub'
 import { AppBar, Button, IconButton, Link, Toolbar, Typography } from '@mui/material'
+import axios from 'axios'
+
+// openapi fetch
+
+const handleReload = async () => {
+  try {
+    await axios.get('/api/projects/reload', {})
+    // await openapiFetch.GET('/api/projects/reload'); // Replace 'your-api-endpoint' with the actual endpoint
+    window.location.reload()
+  } catch (error) {
+    console.error('API call failed:', error)
+  }
+}
 
 export function ServiceHeader({
   version,
@@ -15,7 +28,7 @@ export function ServiceHeader({
       <AppBar position={'static'} color={'transparent'}>
         <Toolbar>
           <Typography variant='h6' sx={{ flexGrow: 1 }}>
-            <img src={logoSrc} height='55px' alt='evidently logo' />
+            <img src={logoSrc} height='55px' />
             <span style={{ verticalAlign: 'super', fontSize: '0.75rem' }}>{version}</span>
           </Typography>
           {authComponent}
@@ -27,6 +40,7 @@ export function ServiceHeader({
           <Link href={'https://docs.evidentlyai.com/'}>
             <Button>Docs</Button>
           </Link>
+          <Button onClick={handleReload}>Reload</Button>
         </Toolbar>
       </AppBar>
     </>
